@@ -21,6 +21,7 @@ using namespace std;
 const int DECK_SIZE = 52;
 int main()
 {
+	system("Color 0A");
 	//the player will play against the computer.
 	Deck playerDeck;
 	SidePile playerSidePile;
@@ -68,20 +69,20 @@ int main()
 		deck[j] = 0;
 		j--;
 	}*/
-	//Testing: player deck will contain cards in ascending order 
+	//Testing: computer deck will contain cards in ascending order 
 	for (int i = 1; i <= DECK_SIZE/4; i++)
 	{
 		for (int j = 0; j < 2; j++)
 		{
-			playerDeck.replace(i);
+			compDeck.replace(i);
 		}
 	}
-	//Testing: computer deck will contain cards in descending order
-	for (int i = DECK_SIZE/4; i >=1; i--)
+	//Testing: player deck will contain cards in ascending order
+	for (int i = 1; i <= DECK_SIZE / 4; i++)
 	{
 		for (int j = 0; j < 2; j++)
 		{
-			compDeck.replace(i);
+			playerDeck.replace(i);
 		}
 	}
 	//Testing: choose # of rounds
@@ -171,7 +172,7 @@ int main()
 			*/
 
 
-
+			
 			cout << "Drawing cards from deck...\n";
 			//each player can peek at their card and decide to pull an additional card out of a pile on the side or push this card onto a pile on the side.
 			cout << "Your card is " << playerCard << ".\n";
